@@ -4,13 +4,19 @@ import { connect } from 'react-redux';
 
 class UserList extends Component {
 
+	// This function will get updated every time the store changes.
+	createListItems () {
+		return this.props.users.map((user) => {
+			return (
+				<li key= {user.id}>{user.first} {user.last}</li>
+			);
+		});
+	}
+
 	render() {
 		return (
 			<ul>
-				<li>One</li>
-				<li>Two</li>
-				<li>Three</li>
-				<li>Four</li>
+				{ this.createListItems() }
 			</ul>
 		);
 	};
@@ -19,7 +25,7 @@ class UserList extends Component {
 // mapStateToProps function takes pieces of store and pass it as property to component.
 
 
-function mapStateToProps() {
+function mapStateToProps(state) {
 	return {
 		users : state.users
 	};
