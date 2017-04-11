@@ -16,6 +16,11 @@ const store = createStore(allReducers); // Creating store for application.
 // Store will be passed as a property to provider to make it 
 // available throughout the application.
 
+// To make data available to components, We need container.
+// Component is a piece of dumb html.
+// Container is a component hooked up with a store.	
+
+
 ReactDOM.render(
 	<Provider store= {store}>
 		<App />
