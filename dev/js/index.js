@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from "react-dom";
-ReactDOM.render(
-    <h1>Test</h1>,
-    document.getElementById('root')
-);
+import { createStore } from "redux";
+
+const store = createStore(); // Creating store for application
+// The data that gets saved in the store is determined by the reducers.
