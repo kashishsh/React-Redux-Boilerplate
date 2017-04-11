@@ -9,7 +9,7 @@ export const selectUser = (user) => {
 	console.log('You clicked on ', user.first);
 	/* Return an action */
 	return {
-		type: 'USER_CLICKED',
+		type: 'USER_SELECTED',
 		payload: user
 	};
 }

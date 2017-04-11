@@ -20,6 +20,14 @@ const store = createStore(allReducers); // Creating store for application.
 // Component is a piece of dumb html.
 // Container is a component hooked up with a store.	
 
+// Action do not manipulate anything, all they do is - telling your application that something
+// happened.
+
+// Reducer determine how the action is going to change your application. 
+// Reducer hears the announcement and see how to change the data of application.
+// Whenever any action occurs in any file, that action automatically get sent to all 
+// reducers.
+
 
 ReactDOM.render(
 	<Provider store= {store}>

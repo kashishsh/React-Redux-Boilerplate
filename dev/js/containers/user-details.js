@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 
 class UserDetail extends Component {
 	render () {
+		console.log(this.props.user);
+		if(!this.props.user)
+			return (
+				<h4> Select a user</h4>
+			);
 		return (
 			<div>
 				<img src= "this.props.user.thumbnail" />
@@ -15,6 +20,7 @@ class UserDetail extends Component {
 };
 
 function mapStateToProps(state) {
+	console.log(state);
 	return {
 		user : state.activeUser
 	};
