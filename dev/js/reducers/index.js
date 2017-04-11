@@ -1,9 +1,11 @@
 /*
  combineReducers is a function that is used to combine all reducers and make one object.
 */
-import { combineReducers } from "redux";
-import UserReducer from "./reducer-users";
+import { combineReducers } from 'redux';
+import UserReducer from './reducer-users';
 
-export const allReducers = combineReducers({
+const allReducers = combineReducers({
 	users: UserReducer
 });
+
+export default allReducers;
